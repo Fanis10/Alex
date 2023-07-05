@@ -19,7 +19,33 @@
 			<ul class="nav__list">
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="room.html">Номер люкс "Коралл"</a></li>
+				<li>
+					<button class="nav-btn btn-brown" data-modal="contactModal">Модальное окно</button>
+				</li>
 			</ul>
+			<div class="modal" id="contactModal">
+				<div class="modal__dialog">
+					<div class="modal__content">
+						<img class="modal__img" src="img/modal-img.webp" alt="">
+						<h1 class="modal__title">Оставить заявку</h1>
+						<form class="form">
+							<fieldset class="form-group">
+								<input type="text" placeholder="Имя">
+							</fieldset>
+							<fieldset class="form-group">
+								<input type="tel" placeholder="Телефон">
+							</fieldset>
+							<div class="form-info">
+								<span>Оставляя заявку, вы соглашаетесь на обработку персональных данных.</span>
+							</div>
+							<button class="form-btn btn-brown">
+								<span>Отправить</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
