@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+	<div class="content">
+		<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__left">
+                <a class="header__logo" href="">
+                    <img src="img/logo.webp" alt="">
+                </a>
+                <div class="header__info">
+                    <span>Гостинично-санаторный комплекс</span>
+                </div>
+            </div>
+            <div class="header__center">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <div class="header__item-show">
+                            <span>О нас</span>
+                            <i>
+                                <img src="img/arrow-down.webp" alt="">
+                            </i>
+                        </div>
+                        <div class="header__item-hidden">
+                            <div class="header__item-content">
+                                <a class="header__item-link" href="">Пункт меню</a>
+                                <a class="header__item-link" href="">Пункт меню</a>
+                                <a class="header__item-link" href="">Пункт меню</a>
+                                <a class="header__item-link" href="">Пункт меню</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__link"><a href="">Номера</a></li>
+                    <li class="header__link"><a href="">Программы</a></li>
+                    <li class="header__link"><a href="">Цены</a></li>
+                    <li class="header__link"><a href="">Фото</a></li>
+                    <li class="header__link"><a href="">Spa-программы</a></li>
+                    <li class="header__link"><a href="">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="header__right">
+                <a class="header__tel" href="tel:8 (800) 500-30-74">
+                    <span>8 (800) 500-30-74</span>
+                </a>
+                <a class="header__btn btn btn-brown" href="">
+                    <span>Перезвоните мне</span>
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+		<main class="main-content">
+			
+		</main>
+
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <a class="footer__logo" href="">
+                <span>Alex Resort & Spa Hotel 4★</span>
+            </a>
+            <div class="footer__desc">
+                <nav class="footer__nav">
+                    <div class="footer__nav-title">
+                        <span>Компания</span>
+                    </div>
+                    <ul class="footer__list">
+                        <li><a href="">Санаторий</a></li>
+                        <li><a href="">Номера</a></li>
+                        <li><a href="">Стоимость услуг</a></li>
+                        <li><a href="">Лечебные программы</a></li>
+                        <li><a href="">Политика конфиденциальности</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__flex">
+                    <nav class="footer__nav">
+                        <div class="footer__nav-title">
+                            <span>Информация</span>
+                        </div>
+                        <ul class="footer__list">
+                            <li><a href="">Акции</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href=""> Контакты</a></li>
+                            <li><a href="">Детокс и ЭРЛ</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="">Курс лечения протрузии позвоночника</a></li>
+                            <li><a href="">Курс лечения остеохондроза позвоночника</a></li>
+                            <li><a href="">Лечение позвоночника и суставов</a></li>
+                            <li><a href="">Программа Детокс в санатории</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	</div>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+	<script type="text/javascript">
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [43.288508, 40.261188],
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([43.288508, 40.261188], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "img/map-icon.webp",
+            iconImageSize: [45, 60],
+            // iconImageOffset: [-15, -44]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+
+    }
+</script>
+
+</body>
+
+</html>
